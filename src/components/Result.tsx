@@ -20,7 +20,7 @@ function Result({ url }: ResultProps) {
 					<FaCopy />
 				</button>
 			</div>
-			<QRCodeCanvas value={url} size={190}/>
+			<QRCodeCanvas value={url} size={190} className="qr_canvas"/>
 		</div>
 	)
 }
