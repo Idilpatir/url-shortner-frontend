@@ -175,3 +175,7 @@ button.copy_button {
   color: var(--background-color);
   cursor: pointer;
 }
+
+.qr_canvas {
+  border: 5px solid white;
+}
