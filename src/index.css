@@ -179,3 +179,46 @@ button.copy_button {
 .qr_canvas {
   border: 5px solid white;
 }
+
+.theme_selector {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+  padding: 10px;
+  color: var(--text-color)
+}
+
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 1s;
+  pointer-events: none;
+  opacity: 0;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
