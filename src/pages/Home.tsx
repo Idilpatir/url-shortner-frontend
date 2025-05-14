@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 
 import Result from '../components/Result'
+import { Shorten } from '../api/Shortener'
 
 import { IoSunny } from "react-icons/io5";
 import { FaMoon } from "react-icons/fa";
@@ -19,6 +20,10 @@ function Home() {
     }
   }, [useDark]);
 
+  const shortenUrl = async () => {
+    const result = await Shorten(url);
+    setResult(`${window.location.host}/${result.url}`)
+  }
 
   return (
     <>
@@ -37,7 +42,7 @@ function Home() {
           />
           <button
             className="submit_button"
-            onClick={() => setResult(url)}
+            onClick={shortenUrl}
           >
             Submit
           </button>
